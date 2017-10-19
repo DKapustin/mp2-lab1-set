@@ -17,7 +17,7 @@ MaxPower = mp;
 
 // конструктор копирования
 
-TSet::TSet(const TSet &s) : BitField(s.MaxPower)
+TSet::TSet(const TSet &s) : BitField(s.BitField)
 
 {
 
