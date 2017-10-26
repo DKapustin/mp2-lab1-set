@@ -295,3 +295,27 @@ TEST(TSet, check_negation_operator)
 
   EXPECT_EQ(expSet, set1);
 }
+TEST(TSet, extra_test)
+{
+TSet Set1(15), Set2(15),Set3(15),Set4(15),Res(15);
+Set1.InsElem(2);
+Set1.InsElem(5);
+Set1.InsElem(11);
+Set1.InsElem(12);
+Set2.InsElem(2);
+Set2.InsElem(3);
+Set2.InsElem(7);
+Set2.InsElem(8);
+Set2.InsElem(12);
+Set3=Set1+Set2;
+Set4=~Set3;
+Res.InsElem(1);
+Res.InsElem(4);
+Res.InsElem(6);
+Res.InsElem(9);
+Res.InsElem(10);
+Res.InsElem(13);
+Res.InsElem(14);
+Res.InsElem(15);
+EXPECT_EQ(Res,Set4);
+}
